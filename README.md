@@ -38,8 +38,17 @@ until not finished repeat
     verify the correct behavior of newly added control
 ```
 
+* * *
+
+The **skeleton bridge** (subject of this article) is defined by the image 2 below
+
+<p align=center>
+  <img src="https://cloud.githubusercontent.com/assets/2712405/12366896/22bfccfc-bbac-11e5-9330-ba0dbd25caef.png"></img>
+ <br><br>
+Image 2 - Aurelia Skeleton Bridge
+</p>
+
+It is the minimal "bridge development environment", agnostic to any and all third party components and is designed to be used as a in place replacement for the original [Aurelia Skeleton Plugin](https://github.com/aurelia/skeleton-plugin) project.
 
 
-
-Then, bridge developers use the whole entity, by adding more wrapper files to the light blue box, and the sample apps that illustrate the use of the wrappers in the green box.
 
