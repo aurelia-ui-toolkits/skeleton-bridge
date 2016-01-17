@@ -85,6 +85,20 @@ A brief description of the orange box content:
 
 The next image shows one of many sample applications that all together form the above mentioned katalog - Aurelia Line Charts component:
 
+<p align=center>
+  <img src="https://cloud.githubusercontent.com/assets/2712405/12375749/363fbd60-bca0-11e5-843a-f9f8fbee0677.png"></img>
+ <br><br>
+Image 4
+</p>
+
+For each sample application from the catalog (observe that the Line Chart sample has several views selectable via side-bar component) there is also the Code Preview components as shown below:
+
+<p align=center>
+  <img src="https://cloud.githubusercontent.com/assets/2712405/12375772/19158e76-bca1-11e5-9485-26560fe3c243.png"></img>
+ <br><br>
+Image 5
+</p>
+
 
 
 
