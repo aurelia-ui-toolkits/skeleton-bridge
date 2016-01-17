@@ -81,6 +81,10 @@ A brief description of the orange box content:
 
 ### Sample bridge
 
+[Aurelia KendoUI bridge](https://github.com/aurelia-ui-toolkits/aurelia-kendoui-plugin) is the Aurelia interface to [KendoUI toolikit](http://demos.telerik.com/kendo-ui/) built with this skeleton bridge. The collection of sample applications (green box on image 1), which is not just the tool for testing KendoUI wrapper classes but also a nice catalog of KendoUI controls that are standard Aurelia Components, is hosted ob GitHub [here](http://aurelia-ui-toolkits.github.io/demo-kendo/#/samples/grid/basic-use)
+
+The next image shows one of many sample applications that all together form the above mentioned katalog - Aurelia Line Charts component:
+
 
 
 
