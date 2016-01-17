@@ -4,7 +4,16 @@
 
 ## Skeleton bridge
 
+### Definition of terms
+
+##### Bridge
+
+Bridge is a term minted to denote a sub-species of Aurelia plugin, created to serve the role of an interface between Aurelia application and some third party software
+
+##### 
+
 ### Introduction
+
 
 **Skeleton** Bridge is an Aurelia application meant to be used as the starting point to for any Aurelia-XXX-Bridge project, XXX denoting the name of any third party Toolkit / SDK that is of interest to Aurelia application developers. This application is designed using all of the experience obtained in the process of building the **[Aurelia-KendoUI Bridge](https://github.com/aurelia-ui-toolkits/aurelia-kendoui-plugin)** - where we used both [Aurelia es2016 skeleton navigation app ](https://github.com/aurelia/skeleton-navigation/tree/master/skeleton-es2016) and [Aurelia skeleton plugin](https://github.com/aurelia/skeleton-plugin) as the code for the initial bridge structure.The idea for using both "skeletons" in a single project was driven by the desire to offer the "mini development environment" in which the developer can simultaneously work on both "wrapper" (often reffered to as a plugin, although the word plugin is more generic than wrapper in this context) and the app "consuming" wrapper's services. 
 
