@@ -1,4 +1,4 @@
-# This project is in the early phase of its development - not ready to be used in any context
+### This project is in the early phase of its development - not ready to be used in any context
 
 * * *
 
@@ -8,7 +8,7 @@
 
 **Skeleton** Bridge is an Aurelia application meant to be used as the starting point to for any Aurelia-XXX-Bridge project, XXX denoting the name of any third party Toolkit / SDK that is of interest to Aurelia application developers. This application is designed using all of the experience obtained in the process of building the **[Aurelia-KendoUI Bridge](https://github.com/aurelia-ui-toolkits/aurelia-kendoui-plugin)** - where we used both [Aurelia es2016 skeleton navigation app ](https://github.com/aurelia/skeleton-navigation/tree/master/skeleton-es2016) and [Aurelia skeleton plugin](https://github.com/aurelia/skeleton-plugin) as the code for the initial bridge structure.The idea for using both "skeletons" in a single project was driven by the desire to offer the "mini development environment" in which the developer can simultaneously work on both "wrapper" (often reffered to as a plugin, although the word plugin is more generic than wrapper in this context) and the app "consuming" wrapper's services. 
 
-### Formal definition of the structure and development process
+### Informal definition of the structure and development process
 
 In the following text, we will use the word **bridge** as an alternative to the word **interface** - both meaning a "software connector" between two software components that cannot collaborate without such bridge. 
 
@@ -48,7 +48,39 @@ The **skeleton bridge** (subject of this article) is defined by the image 2 belo
 Image 2 - Aurelia Skeleton Bridge
 </p>
 
-It is the minimal "bridge development environment", agnostic to any and all third party components and is designed to be used as a in place replacement for the original [Aurelia Skeleton Plugin](https://github.com/aurelia/skeleton-plugin) project.
+This is the minimal "bridge development environment", agnostic to any and all third party components, designed to be used as the replacement for the original [Aurelia Skeleton Plugin](https://github.com/aurelia/skeleton-plugin) project. It is the starting point for development of Aurelia Bridge, consisting of a single wrapper clas 
+
+```javascript
+export class ClickCounter {
+  count = 0;
+
+  increment() {
+    this.count++;
+  }
+}
+```
+
+and a similarly trivial Aurelia application that uses this wrapper.
+
+The orange box represents the collection of the Bridge project's infrastructure and utilities - defined on Image 3 below:
+
+<p align=center>
+  <img src="https://cloud.githubusercontent.com/assets/2712405/12367304/ebbdd764-bbae-11e5-905a-bd7dfc6427da.png"></img>
+ <br><br>
+Image 3 - Aurelia Skeleton Bridge - Detailed 
+</p>
+<br>
+
+As it's the case with any well designed Aurelia application - all orange box sub-components are implemented as configurable `features, allowing bridge extensibility.
+
+A brief description of the orange box content:
+
+1. All UI elements that the green box offers to the wrapper consuming applications (Image 2 above)
+2. Full online help infrastructure (again needed by the green box)
+3. [Plugin Builder](https://github.com/aurelia-ui-toolkits/plugin-builder.
+
+### Sample bridge
+
 
 
 
