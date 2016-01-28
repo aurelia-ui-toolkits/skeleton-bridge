@@ -1,9 +1,12 @@
-@import "temp-bootstrap-materialize-fixes.css";
 
 body {
   margin: 0;
     font-family: Arial, sans-serif;
+    
+    /*because of bootstrap fixed navbar*/
+    padding-top: 70px;
 }
+
 
 .splash {
     text-align: center;

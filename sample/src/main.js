@@ -5,7 +5,8 @@ export function configure(aurelia) {
     .standardConfiguration()
     .developmentLogging()
     .plugin('aurelia-skeleton-bridge', plugin => {
-      plugin.useClickCounter();
+      plugin.useClickCounter()
+      .useNavbar();
     });
 
   aurelia.use.globalResources('shared/collapse-panel');
