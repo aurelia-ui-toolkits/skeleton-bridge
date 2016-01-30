@@ -6,6 +6,11 @@ export class ConfigBuilder {
   useGlobalResources: boolean = true;
   globalResources = [];
 
+  useAll() : ConfigBuilder {
+    return this.useClickCounter()
+               .useNavbar()
+               .useNavs();
+  }
   /**
   * Use my control
   */
@@ -25,6 +30,13 @@ export class ConfigBuilder {
     return this;
   }
 
+  useNavs() : ConfigBuilder {
+    this.globalResources.push('./navs/navs');
+    this.globalResources.push('./navs/tabcontent');
+    this.globalResources.push('./navs/tabpane');
+
+    return this;
+  }
   /**
   * Don't globalize any resources
   * Allows you to import yourself via <require></require>
