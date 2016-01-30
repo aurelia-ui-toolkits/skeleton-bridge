@@ -9,14 +9,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </b-navbar-toggle>
-           <b-navbar-brand b-href="#">
+            <b-navbar-brand b-href="#">
                 <span>${router.title}</span>
             </b-navbar-brand>
         </b-navbar-header>
 
         <b-navbar-collapse b-id="bs-example-navbar-collapse-1">
             <b-navbar-nav>
-
+                <li route-highlight="routes: samples">
+                    <a route-href="route: samples">Components Catalog</a>
+                </li>
+                
                 <li route-highlight="routes: about">
                     <a route-href="route: about">About</a>
                 </li>
