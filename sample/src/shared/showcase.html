@@ -5,11 +5,11 @@
         <h3>${ router.title }</h3>
         <div>
             <div class="col-md-2">
-                <b-navs b-style="pills" b-stacked="true">
+                <ul b-navs="b-style:pills; b-stacked.bind:true">
                     <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
                         <a href.bind="row.href">${row.title}</a>
                     </li>
-                </b-navs>
+                </ul>
             </div>
             <div class="col-md-10" style="padding: 0">
                 <router-view></router-view>
