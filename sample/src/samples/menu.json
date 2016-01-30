@@ -5,5 +5,8 @@
   "Navigation": {
     "Navbar": "navbar",
     "Navs": "navs"
+  },
+   "Input": {
+    "Button": "button"
   }
 }

@@ -9,7 +9,8 @@ export class ConfigBuilder {
   useAll() : ConfigBuilder {
     return this.useClickCounter()
                .useNavbar()
-               .useNavs();
+               .useNavs()
+               .useButton();
   }
   /**
   * Use my control
@@ -35,6 +36,11 @@ export class ConfigBuilder {
     this.globalResources.push('./navs/tabcontent');
     this.globalResources.push('./navs/tabpane');
 
+    return this;
+  }
+
+  useButton() : ConfigBuilder {
+    this.globalResources.push('./button/button');
     return this;
   }
   /**
