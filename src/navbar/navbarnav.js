@@ -1,7 +1,7 @@
-import { bindable, customElement, inject } from 'aurelia-framework';
+import { bindable, customAttribute, inject } from 'aurelia-framework';
 import { AttributeManager } from '../common/attributeManager';
 
-@customElement('b-navbar-nav')
+@customAttribute('b-navbar-nav')
 @inject(Element)
 export class BNavbarNav {
 
@@ -9,10 +9,12 @@ export class BNavbarNav {
 
     constructor(element) {
       this.element = element;
+      this.fixedAttributeManager = new AttributeManager(this.element);
     }
 
     attached() {
-      this.fixedAttributeManager = new AttributeManager(this.navBarNavElem);
+      this.fixedAttributeManager.addClasses('nav');
+      this.fixedAttributeManager.addClasses('navbar-nav');
 
       if (this.position) {
         this.fixedAttributeManager.addClasses(`navbar-${this.position}`);

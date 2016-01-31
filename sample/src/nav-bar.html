@@ -15,7 +15,7 @@
         </b-navbar-header>
 
         <b-navbar-collapse b-id="bs-example-navbar-collapse-1">
-            <b-navbar-nav>
+            <ul b-navbar-nav>
                 <li route-highlight="routes: samples">
                     <a route-href="route: samples">Components Catalog</a>
                 </li>
@@ -36,13 +36,13 @@
                     <a route-href="route: help">Help/Docs</a>
                 </li>
 
-            </b-navbar-nav>
+            </ul>
 
-            <b-navbar-nav position="right">
+            <ul b-navbar-nav="position:right">
                 <li class="loader" if.bind="router.isNavigating">
                     <i class="fa fa-spinner fa-spin fa-2x"></i>
                 </li>
-            </b-navbar-nav>
+            </ul>
 
         </b-navbar-collapse>
     </b-navbar>

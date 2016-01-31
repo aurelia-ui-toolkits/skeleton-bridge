@@ -1,5 +1,5 @@
-import {useView, inject} from 'aurelia-framework';
-import {Registry} from 'shared/registry';
+import { inject, useView } from 'aurelia-framework';
+import { Registry } from 'shared/registry';
 
 @useView('shared/showcase.html')
 @inject(Registry)
@@ -12,6 +12,6 @@ export class Index {
   configureRouter(config, router) {
     this.router = router;
 
-    return this.registry.load(config, 'click-counter');
+    return this.registry.load(config, 'button');
   }
 }
