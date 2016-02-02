@@ -17,7 +17,7 @@ export class BButton {
     }
 
     attached() {
-      this.fixedAttributeManager.addClasses(`btn`);
+      this.fixedAttributeManager.addClasses('btn');
       this.fixedAttributeManager.addClasses(`btn-${this.bStyle}`);
 
       if (this.bSize) {
