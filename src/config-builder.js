@@ -10,7 +10,10 @@ export class ConfigBuilder {
     return this.useClickCounter()
                .useNavbar()
                .useNavs()
-               .useButton();
+               .useButton()
+               .useCollapse()
+               .usePanel()
+               .useListGroup();
   }
   /**
   * Use my control
@@ -41,6 +44,28 @@ export class ConfigBuilder {
 
   useButton() : ConfigBuilder {
     this.globalResources.push('./button/button');
+    return this;
+  }
+
+  useCollapse() : ConfigBuilder {
+    this.globalResources.push('./collapse/collapse');
+    this.globalResources.push('./collapse/collapsible');
+    return this;
+  }
+
+  usePanel() : ConfigBuilder {
+    this.globalResources.push('./panel/panel');
+    this.globalResources.push('./panel/panelbody');
+    this.globalResources.push('./panel/panelfooter');
+    this.globalResources.push('./panel/panelgroup');
+    this.globalResources.push('./panel/panelheading');
+    this.globalResources.push('./panel/paneltitle');
+    return this;
+  }
+
+  useListGroup() : ConfigBuilder {
+    this.globalResources.push('./listgroup/listgroup');
+    this.globalResources.push('./listgroup/listgroupitem');
     return this;
   }
   /**

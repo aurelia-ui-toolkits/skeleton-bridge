@@ -8,5 +8,11 @@
   },
    "Input": {
     "Button": "button"
+  },
+   "Collapse": {
+    "Collapse": "collapse"
+  },
+   "Panel": {
+    "Panel": "panel"
   }
 }
