@@ -3,7 +3,6 @@ import {Router} from 'aurelia-router';
 import {EventAggregator} from 'aurelia-event-aggregator';
 import registry from './registry.json!';
 import jQuery from 'jquery';
-import 'kendo-ui/js/kendo.panelbar.min';
 
 @inject(Router, EventAggregator)
 export class Doc {
@@ -21,6 +20,7 @@ export class Doc {
     for (let categoryKey of Object.keys(this.registry)) {
       let category = {
         name: categoryKey,
+        id: this.encode(categoryKey),
         files: this.registry[categoryKey]
       };
 
@@ -32,10 +32,6 @@ export class Doc {
     }
   }
 
-  attached() {
-    this.panelBar = $(this.panelBarDiv).kendoPanelBar().data('kendoPanelBar');
-  }
-
   // - adds the page to route params
   // - sets the file path as activeDoc
   // - selects the item in panelbar
@@ -45,7 +41,7 @@ export class Doc {
     if (file) {
       this.activeDoc = file.path;
 
-      this.selectInPanelBar(fileName, categoryName);
+      this.selectInAccordion(fileName, categoryName);
     }
   }
 
@@ -63,6 +59,7 @@ export class Doc {
   }
 
   routeToPage(fileName, categoryName) {
+    this.activeFileName = fileName;
     this.router.navigateToRoute('docs', {
       category: this.encode(categoryName),
       file: this.encode(fileName)
@@ -79,26 +76,9 @@ export class Doc {
     }
   }
 
-  // loop through all category items in the panelbar
-  // and their file items
-  // and expand the category by name and select the file by name
-  selectInPanelBar(fileName, categoryName) {
-    let categoryLis = $(this.panelBarDiv).children('li');
-
-    $(categoryLis).each((index, element) => {
-      let categoryText = $(element).children('span').text().trim().toLowerCase();
-      if (this.encode(categoryText) === categoryName) {
-        this.panelBar.expand($(element));
-
-        let fileLis = $(element).find('ul').children('li');
-        $(fileLis).each((i, elem) => {
-          let fileText = $(elem).children('span').text().trim().toLowerCase();
-          if (this.encode(fileText) === fileName) {
-            this.panelBar.select($(elem));
-          }
-        });
-      }
-    });
+  // expand the category by id
+  selectInAccordion(fileName, categoryName) {
+    jQuery('#' + this.encode(categoryName)).collapse('show');
   }
 
   // scroll to top after a doc has been loaded
