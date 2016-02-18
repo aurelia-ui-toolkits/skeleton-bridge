@@ -1,4 +1,5 @@
-import {bindable, customElement, inject } from 'aurelia-framework';
+import { bindable, customElement } from 'aurelia-templating';
+import { inject } from 'aurelia-dependency-injection';
 
 @customElement('b-navbar-toggle')
 @inject(Element)
@@ -10,4 +11,3 @@ export class BNavbarToggle {
       this.element = element;
     }
 }
-

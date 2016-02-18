@@ -1,4 +1,5 @@
-import { customElement, inject } from 'aurelia-framework';
+import { customElement } from 'aurelia-templating';
+import { inject } from 'aurelia-dependency-injection';
 
 @customElement('b-panel-body')
 @inject(Element)
