@@ -1,18 +1,21 @@
 import {inject, bindable} from 'aurelia-framework';
 import {DOM} from 'aurelia-pal';
+import { ComponentService } from '../shared/component-service';
 import json from './menu.json!';
 
-@inject(Element)
+@inject(Element, ComponentService)
 export class Menu {
 
   @bindable router;
 
-  constructor(element) {
+  constructor(element, componentService) {
+    this.categories = componentService.getIterableComponents(true);
     this.element = element;
+    this.componentService = componentService;
   }
 
   attached() {
-    this.generateRow(json);
+    // this.generateRow(json);
   }
 
   generateRow(data) {

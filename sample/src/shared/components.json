@@ -1,0 +1,18 @@
+{
+  "Most popular": {
+    "Click counter": { "status": "done", "moduleId": "click-counter" }
+  },
+  "Navigation": {
+    "Navbar": { "status": "wip" },
+    "Navs": { "status": "wip" }
+  },
+   "Input": {
+    "Button": { "status": "wip" }
+  },
+   "Collapse": {
+    "Collapse": { "status": "wip" }
+  },
+   "Panel": {
+    "Panel": { "status": "wip" }
+  }
+}
