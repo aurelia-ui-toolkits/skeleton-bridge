@@ -1,25 +1,27 @@
 <template>
-    
+
     <div class="row">
         <div class="col-md-3">
             <br>
 
-            <b-panel-group ref="panelGroup">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                <b-panel repeat.for="category of categories">
-                    <b-panel-heading>
-                        <h4 b-panel-title>
-                            <a b-collapse href="#${category.id}">${category.name}</a>
-                        </h4>
-                    </b-panel-heading>
-                    <b-collapsible b-type="panel" b-id="${category.id}">
-                        <ul b-list-group>
-                            <li b-list-group-item style="cursor: pointer" class="${file.path === activeDoc ? 'active' : ''}" repeat.for="file of category.files" click.delegate="routeToPage(file.name, category.name)">${file.name}</li>
-                        </ul>
-                    </b-collapsible>
-                </b-panel>
+              <div class="panel panel-default" repeat.for="category of categories">
+                <div class="panel-heading">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#${category.id}" aria-expanded="true" aria-controls="${category.id}">
+                    ${category.name}
+                  </a>
+                </div>
 
-            </b-panel-group>
+                <div class="collapse" id="${category.id}">
+                  <div class="well">
+                    <ul>
+                        <li style="cursor: pointer" class="${file.path === activeDoc ? 'active' : ''}" repeat.for="file of category.files" click.delegate="routeToPage(file.name, category.name)">${file.name}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
 
         <div class="col-md-9" ref="markdownCol" id="markdownCol">

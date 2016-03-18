@@ -1,8 +1,8 @@
 {
-  "name": "aurelia-skeleton-bridge",
+  "name": "skeleton-bridge",
   "version": "0.0.1",
   "registry": "github",
-  "description": "Starter project for an Aurelia bridge/",
+  "description": "Starter project for an Aurelia bridge",
   "keywords": [
     "aurelia",
     "plugin",

@@ -25,6 +25,7 @@
       "text": "github:systemjs/plugin-text@^0.0.4"
     },
     "devDependencies": {
+      "aurelia-polyfills": "npm:aurelia-polyfills@^1.0.0-beta.1.0.6",
       "babel": "npm:babel-core@^5.8.22",
       "babel-runtime": "npm:babel-runtime@^5.8.20",
       "core-js": "npm:core-js@^2.0.3"
@@ -36,7 +37,8 @@
     }
   },
   "devDependencies": {
+    "babel-eslint": "^4.1.1",
     "jspm": "0.16.15",
-    "babel-eslint": "^4.1.1"
+    "phantomjs-polyfill": "0.0.2"
   }
 }

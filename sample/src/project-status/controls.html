@@ -1,43 +1,39 @@
 <template>
   <require from="./controls.css"></require>
-   <div class="col-md-12">
-     <h2>Project status</h2>
-     <section>
+  <div class="col-md-12">
+    <h2>Project status</h2>
+    <section>
 
-       <div>
-           <br>
-           <br>
+      <div>
+        <br>
+        <br>
 
-           <!-- page title - single column -->
-           <div class="row">
-               <div class="col-xs-12 col-sm-12">
-                   <p>
-                       <span style="font-size:18px">
-                           <img src="images/blue.png">
-                           Implemented controls
-                           &nbsp; &nbsp;
-                           <img src="images/orange.png">
-                           controls in development
-                       </span>
-                   </p>
-               </div>
-           </div>
+        <!-- page title - single column -->
+        <div class="row">
+          <div class="col-xs-12 col-sm-12">
+            <p>
+              <span style="font-size:18px">
+                <img src="images/blue.png">
+                Implemented controls
+                &nbsp; &nbsp;
+                <img src="images/orange.png">
+                controls in development
+              </span>
+            </p>
+          </div>
+        </div>
 
-          <div class="row">
-               <b-panel class="col-xs-12 col-sm-3" repeat.for="category of categories">
-                 <b-panel-header>${category.title}</b-panel-header>
-                 <b-panel-body>
-                   <div repeat.for="ctrl of category.controls" class="control-info ${ ctrl.status }">
-                      <a if.bind="ctrl.link" href="${ ctrl.link }">${ ctrl.title }</a>
-                      <span if.bind="!ctrl.link">${ ctrl.title }</span>
-                    </div>
-                 </b-panel-body>
-               </b-panel>
-       </div>
-       <div class="row">
-         <h4>Check <a href="http://aurelia-ui-toolkits.github.io/demo-kendo/#/project-status">this page</a> for the the example of what could be the content of this page<h4>
-       </div>
-
-    </section>
- </div>
-</template>
+        <div class="row">
+          <b-panel class="col-xs-12 col-sm-3" repeat.for="category of categories">
+            <b-panel-header>${category.title}</b-panel-header>
+            <b-panel-body>
+              <div repeat.for="ctrl of category.controls" class="control-info ${ ctrl.status }">
+                <a if.bind="ctrl.link" href="${ ctrl.link }">${ ctrl.title }</a>
+                <span if.bind="!ctrl.link">${ ctrl.title }</span>
+              </div>
+            </b-panel-body>
+          </b-panel>
+        </div>
+      </section>
+    </div>
+  </template>

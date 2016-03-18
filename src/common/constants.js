@@ -1,4 +1,5 @@
 export const constants = {
-  eventPrefix: 'md-on-',
-  bindablePrefix: 'md-'
+  bindablePrefix: 'au-',
+  attributePrefix: 'au-',
+  elementPrefix: 'au-'
 };

@@ -1,4 +1,0 @@
-export class Fixed {
-    constructor() {
-    }
-}

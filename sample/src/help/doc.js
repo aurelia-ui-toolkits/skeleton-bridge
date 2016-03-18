@@ -32,6 +32,11 @@ export class Doc {
     }
   }
 
+
+  attached() {
+    $('.collapse').collapse();
+  }
+
   // - adds the page to route params
   // - sets the file path as activeDoc
   // - selects the item in panelbar

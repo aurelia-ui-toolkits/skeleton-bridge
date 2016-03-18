@@ -1,6 +1,5 @@
-var isparta = require('isparta');
-var paths = require('./build/paths');
-var babelOptions = require('./build/babel-options');
+// Karma configuration
+// Generated on Fri Dec 05 2014 16:49:29 GMT-0500 (EST)
 
 module.exports = function(config) {
   var configuration = {
@@ -14,14 +13,14 @@ module.exports = function(config) {
     frameworks: ['jspm', 'jasmine'],
 
     jspm: {
-      // Edit this to your needs
-      loadFiles: [paths.tests],
-      serveFiles: [paths.source]
+      serveFiles: ['src/**/*.js'],
+      loadFiles: ['test/unit/**/*.js']
     },
 
 
     // list of files / patterns to load in the browser
     files: [
+      { pattern: 'vendors/**/*.js', watched: false, served: true, included: false }
     ],
 
 
@@ -29,52 +28,27 @@ module.exports = function(config) {
     exclude: [
     ],
 
-
-
-
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      [paths.tests]: ['babel'],
-      [paths.source]: ['babel', 'sourcemap', 'coverage']
+      'test/**/*.js': ['babel'],
+      'src/**/*.js': ['babel']
     },
-
     'babelPreprocessor': {
       options: {
-        loose: babelOptions.loose,
-        stage: babelOptions.stage,
-        optional: babelOptions.optional,
-        sourceMap: 'inline'
+        sourceMap: 'inline',
+        moduleIds: false,
+        optional: [
+          'es7.decorators',
+          'es7.classProperties'
+        ]
       }
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['coverage', 'progress'],
-
-    coverageReporter: {
-      instrumenters: {
-        isparta: isparta
-      },
-
-      instrumenter: {
-        [paths.source]: 'isparta'
-      },
-
-      dir: 'build/reports/coverage/',
-
-      reporters: [{
-        type: 'text-summary'
-      }, {
-        type: 'html',
-        subdir: 'html'
-      }, {
-        type: 'lcovonly',
-        subdir: 'lcov',
-        file: 'report-lcovonly.txt'
-      }]
-    },
+    reporters: ['progress'],
 
 
     // web server port
