@@ -1,16 +1,9 @@
 {
-  "About this application": [{
+  "Lorem": [{
     "name": "1. Lorem",
     "path": "help/docs/lorem.md"
-  },
-  {
-    "name": "2. Lorem",
-    "path": "help/docs/lorem.md"
-  }, {
-    "name": "3. Lorem",
-    "path": "help/docs/lorem.md"
   }],
-  "TEST": [{
+  "Ipsum": [{
     "name": "1. Ipsum",
     "path": "help/docs/ipsum.md"
   }]
