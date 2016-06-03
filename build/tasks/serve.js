@@ -14,8 +14,8 @@ gulp.task('serve', ['build'], function(done) {
       baseDir: paths.sample,
       routes: {
         '/src/root/': './'
-      },
-    },
+      }
+    }
   };
 
   // Create a route to the build output directory so we can load the plugin from the subdir
