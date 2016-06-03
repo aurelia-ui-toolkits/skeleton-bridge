@@ -1,7 +1,6 @@
 import {inject, bindable} from 'aurelia-framework';
 import {DOM} from 'aurelia-pal';
 import { ComponentService } from '../shared/component-service';
-import json from './menu.json!';
 
 @inject(Element, ComponentService)
 export class Menu {
