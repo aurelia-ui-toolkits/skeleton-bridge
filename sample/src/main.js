@@ -1,12 +1,10 @@
-// import 'materialize';
+import 'bootstrap';
 
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
     .developmentLogging()
-    .plugin('aurelia-skeleton-bridge', plugin => {
-      plugin.useAll();
-    });
+    .plugin('skeleton-bridge', plugin => plugin.useAll());
 
   aurelia.use.globalResources('shared/collapse-panel');
   aurelia.use.globalResources('shared/markdown');

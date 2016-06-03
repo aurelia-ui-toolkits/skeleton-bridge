@@ -1,49 +1,53 @@
 <template>
+  <nav>
     <require from="./route-highlight"></require>
 
-    <b-navbar b-fixed="top">
-        <b-navbar-header>
-            <b-navbar-toggle b-data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle Navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </b-navbar-toggle>
-            <b-navbar-brand b-href="#">
-                <span>${router.title}</span>
-            </b-navbar-brand>
-        </b-navbar-header>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" route-href="route: samples">
+        <span>Components Catalog</span>
+      </a>
+    </div>
 
-        <b-navbar-collapse b-id="bs-example-navbar-collapse-1">
-            <ul b-navbar-nav>
-                <li route-highlight="routes: samples">
-                    <a route-href="route: samples">Components Catalog</a>
-                </li>
-                
-                <li route-highlight="routes: about">
-                    <a route-href="route: about">About</a>
-                </li>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
 
-                <li route-highlight="routes: installation">
-                    <a route-href="route: installation">Installation</a>
-                </li>
+        <li route-highlight="routes: about">
+          <a route-href="route: about">About</a>
+        </li>
 
-                <li route-highlight="routes: project-status">
-                    <a route-href="route: project-status">Project Status</a>
-                </li>
+        <li route-highlight="routes: installation">
+          <a route-href="route: installation">Installation</a>
+        </li>
 
-                <li route-highlight="routes: help">
-                    <a route-href="route: help">Help/Docs</a>
-                </li>
+        <li route-highlight="routes: project-status">
+          <a route-href="route: catalog-index">Catalog index</a>
+        </li>
 
-            </ul>
+ <!--   <li route-highlight="routes: theme">
+          <a route-href="route: theme">Theme</a>
+        </li> -->
 
-            <ul b-navbar-nav="position:right">
-                <li class="loader" if.bind="router.isNavigating">
-                    <i class="fa fa-spinner fa-spin fa-2x"></i>
-                </li>
-            </ul>
+        <li route-highlight="routes: documentation">
+          <a route-href="route: documentation">Documentation</a>
+        </li>
 
-        </b-navbar-collapse>
-    </b-navbar>
+        <li route-highlight="routes: help">
+          <a route-href="route: help">Help</a>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="loader" if.bind="router.isNavigating">
+          <i class="fa fa-spinner fa-spin fa-2x"></i>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
