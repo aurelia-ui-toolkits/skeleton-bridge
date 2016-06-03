@@ -2,7 +2,7 @@
 
 * * *
 
-#### For more information about this project see the [adjacent wiki pages](https://github.com/aurelia-ui-toolkits/skeleton-bridge/wiki) 
+#### For more information about this project see the [adjacent wiki pages](https://github.com/aurelia-ui-toolkits/skeleton-bridge/wiki)
 
 ## Building The Code
 
@@ -15,6 +15,7 @@ To build the code, follow these steps.
   npm install
   jspm install
   cd sample
+  npm install
   jspm install
   ```
 3. Ensure that [Gulp](http://gulpjs.com/) is installed. If you need to install it, use the following command:
@@ -27,4 +28,3 @@ To build the code, follow these steps.
   ```shell
   gulp watch
   ```
-
